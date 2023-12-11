@@ -1,9 +1,8 @@
 "use client"
 //1. import area
 import { ThemeProvider } from '@emotion/react'
-import { Box, Container, createTheme, CssBaseline, Avatar, Typography, TextField, FormControlLabel, Checkbox, Button, Grid} from '@mui/material';
+import { Box, Container, createTheme, CssBaseline, Avatar, Typography, TextField, FormControlLabel, Checkbox, Button, Grid, Link } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Link from 'next/link';
 import { Copyright } from '@mui/icons-material';
 
 
@@ -43,19 +42,22 @@ function Home() {
                 <Button fullWidth type="submit" variant="contained" sx={{mt:2, mb:2, bgcolor:"green"}}>Sign In</Button>
                 <Grid container>
                   <Grid item xs>
-                    <Link href="#" variant="body2">
+                    <Link href="/" color="#000000" variant="body2" underline="hover" >
                       Forgot password?
                     </Link>
                   </Grid>
                   <Grid item>
-                    <Link href="#" variant="body2">
+                    <Link href="/" color="#000000" variant="body2" underline="hover" >
                      {"Don't have an account? Sign Up"}
                     </Link>
                   </Grid>
                 </Grid>
               </Box>
             </Box>
-            <Copyright sx={{ mt: 8, mb: 4 }} />
+            <Typography variant="body2" sx={{ mt:3 }} align="center" > 
+              
+              <Link href="/" color="#000000" variant="body2" underline="hover" >{'Copyright ©'} Your Website 2023</Link>
+            </Typography>
           </Container>
        </ThemeProvider>
     </>
